@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+
+
 void flush_in(){ 
 	//função para limpar o buffer do teclado
     int ch;
@@ -110,15 +112,21 @@ void decript(char nome[100]){
 	    printf("\n\n");
 }
 
+void apresentacao(){
+	printf("\e[H\e[2J");
+	printf("\n\n\n");
+	printf("###### Gabriel Barban Rocha - Key Generator Versão 1 ######");
+	printf("\n\n\n");
+}
+
 void opcoes(){
 
 	char nome[100];
 	char opcao[1];
+	int a;
 
-	printf("\n\n\n");
-	printf("###### Gabriel Barban Rocha - Key Generator Versão 1 ######");
-	printf("\n\n\n");
-
+	system("read -p \"Pressione enter para continuar\" saindo");
+	printf("\e[H\e[2J");
 	printf("Qual o seu nome? ");
 	scanf("%s", nome);
 	flush_in(); 
@@ -128,20 +136,24 @@ void opcoes(){
 	
 	if(opcao[0] == '1') 
 	{
-		encript(nome);
+		encript(nome);		
+		opcoes();
 	}
 	if(opcao[0] == '2')
 	{
 		decript(nome);
+		opcoes();
 	}
-	else
+	if( (opcao[0] != '1') & (opcao[0] != '2') )
 	{
 		printf("Você não escolheu nenhuma das opções corretas.\n");
+		opcoes();
 	}
 }
 
 int main()
 {
+	apresentacao();
 	opcoes();
 	return 0;
 }
