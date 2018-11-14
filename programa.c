@@ -8,7 +8,8 @@ void flush_in(){
     while( (ch = fgetc(stdin)) != EOF && ch != '\n' ){} 
 }
 
-void encript(char nome[100]){
+void encript(char nome[100])
+{
 		char senha[100];
 		char dicionario[100] = {
 		'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
@@ -63,7 +64,8 @@ void encript(char nome[100]){
 		printf("\n\n");
 }
 
-void decript(char nome[100]){
+void decript(char nome[100])
+{
 		char senha_e[100];
 		char senha[100];
 		char temp;
@@ -110,15 +112,16 @@ void decript(char nome[100]){
 	    printf("\n\n");
 }
 
-void apresentacao(){
+void apresentacao()
+{
 	printf("\e[H\e[2J");
 	printf("\n\n\n");
 	printf("###### Gabriel Barban Rocha - Key Generator Versão 1 ######");
 	printf("\n\n\n");
 }
 
-void opcoes(){
-
+void opcoes()
+{
 	char nome[100];
 	char opcao[1];
 	int a;
