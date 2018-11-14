@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
-
 void flush_in(){ 
 	//função para limpar o buffer do teclado
     int ch;
