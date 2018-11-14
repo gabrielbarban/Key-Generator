@@ -73,7 +73,7 @@ void decript(char nome[100]){
 		'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
 		'Y', 'Z'};
 
-		printf("\nCerto %s... informe o código que deverá ser desemcriptado: ", nome);
+		printf("\nCerto %s... informe o código que deverá ser desencriptado: ", nome);
 		scanf("%s", senha_e);
 
 		int qtd_certa = (strlen(senha_e) / 2);
@@ -102,7 +102,7 @@ void decript(char nome[100]){
 			}
 		}
 
-		printf("\n\nSENHA DESEMCRIPTADA:\n");
+		printf("\n\nSENHA DESENCRIPTADA:\n");
 		for(int cont = 0 ; cont<strlen(senha) ; cont++)
 	    {
 	        printf("%c", senha[cont]);
@@ -126,10 +126,10 @@ void opcoes(){
 	scanf("%c", opcao);
 	flush_in(); 
 	
-	if(opcao[0] == '1') {
+	if(opcao[0] == '1') 
+	{
 		encript(nome);
 	}
-
 	if(opcao[0] == '2')
 	{
 		decript(nome);
