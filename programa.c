@@ -124,7 +124,6 @@ void opcoes(){
 	char nome[100];
 	char opcao[1];
 	int a;
-
 	system("read -p \"Pressione enter para continuar\" saindo");
 	printf("\e[H\e[2J");
 	printf("Qual o seu nome? ");
@@ -133,7 +132,6 @@ void opcoes(){
 	printf("\n1- Criar chave encriptada\n2- Desemcriptar uma chave\n\n\nO que você deseja fazer %s (Digite o n° da opção)? ", nome);
 	scanf("%c", opcao);
 	flush_in(); 
-	
 	if(opcao[0] == '1') 
 	{
 		encript(nome);		
