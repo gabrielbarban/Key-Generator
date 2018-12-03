@@ -116,7 +116,8 @@ void apresentacao()
 {
 	printf("\e[H\e[2J");
 	printf("\n\n\n");
-	printf("###### Gabriel Barban Rocha - Key Generator Versão 1 ######");
+	printf("###### Gabriel Barban Rocha - Key Generator Versão 1.1 ######");
+	printf("\n\n\n*** Correção de bugs e melhorias");
 	printf("\n\n\n");
 }
 
